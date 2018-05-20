@@ -1,4 +1,4 @@
-# Spring Boot 2 - ElasticSearch with Data Rest, JPA and MySQL as DB
+# Spring Boot 2 - ElasticSearch with Data Rest, HATEOAS, JPA and MySQL as DB
 
 ## Documentation Coming Soon
 
