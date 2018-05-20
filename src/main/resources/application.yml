@@ -1,0 +1,25 @@
+server:
+  port: 8080
+spring:
+  data:
+    elasticsearch:
+      cluster-nodes: localhost:9300
+      cluster-name: elasticsearch
+  datasource:
+    url: jdbc:mysql://${db.host:localhost}:${db.port:3306}/${db.name:elasticsearch}?useSSL=false
+    username: ${db.uid:root}
+    password: ${db.pwd:password}
+    driver-class-name: com.mysql.jdbc.Driver
+    tomcat:
+      test-while-idle: true
+      validation-query: SELECT 1
+    initialization-mode: never
+    platform: mysql
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate:
+      naming:
+        physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+      ddl-auto: validate
